@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Jumbotron,Col } from 'react-bootstrap';
 import Card from "./Card.js"
-export default function CardList() {
+export default function CardList(props) {
     return (
         <div>
             <Container>

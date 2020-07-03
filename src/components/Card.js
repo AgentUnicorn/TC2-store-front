@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Jumbotron, Card,Button } from "react-bootstrap";
 import "./Card.css"
-export default function Card2() {
+export default function Card2(props) {
   return (
     <div class="margin">
       <Card style={{ width: "18rem"}}>

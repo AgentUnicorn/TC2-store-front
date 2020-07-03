@@ -35,7 +35,7 @@ const Experience = ({
 }) => (
 
     <div>
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem', margin:"20px"}}>
             <Card.Img variant="top" src={pictureUrl} height="448" width="336" />
             <Card.Body>
                 <Card.Title><h2>{title}</h2></Card.Title>

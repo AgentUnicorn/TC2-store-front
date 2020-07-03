@@ -1,7 +1,7 @@
 import React from 'react'
 import {Card, ListGroup, ListGroupItem} from 'react-bootstrap'
 import { Container, Row, Jumbotron,Button } from 'react-bootstrap';
-export default function Categories() {
+export default function Categories(props) {
     return (
         <div>
             <Jumbotron>
