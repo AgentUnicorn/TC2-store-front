@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {Card, ListGroup, ListGroupItem} from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap';
 
 const ExpList = () => {
     const [exp, setExp] = useState([])
@@ -14,10 +15,13 @@ const ExpList = () => {
     },[])
   return (
         <div>
-            <h1>Hello World!!</h1>
+            <Container>
+                <Row>
             {exp.map((e)=> (
                 <Experience {...e} />
             ))}
+                </Row>
+            </Container>
         </div>
     )
 };

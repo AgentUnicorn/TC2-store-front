@@ -9,12 +9,14 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div>
     <Router>
       <NavBar />
+
       <div className="App">
         <Switch>
           <Route path="/add">
@@ -25,6 +27,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+
   </Router>
   </div>
   );
