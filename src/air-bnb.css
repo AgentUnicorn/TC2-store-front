@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Regole Container */
+  .container {
+    width: 500px;
+    height: 100vh;
+    margin: auto;
+    padding: 0 20px;
+  }
+  /* Fine Regole Container */
+  
+  /* Regole box */
+  .container .box {
+    width: 100%;
+    height: calc(100% / 3);
+    margin: auto;
+    padding: 20px 20px 0;
+  }
+  .container .box:last-child {
+    padding-bottom: 20px;
+  }
+  /* Fine Regole box */
+  
+  /* Regole città */
+  .container .box .city {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+  .container .box .city.milano {
+    background-image: url(../img/milano.jpg);
+  }
+  .container .box .city.napoli {
+    background-image: url(../img/napoli.jpg);
+  }
+  .container .box .city.roma {
+    background-image: url(../img/roma.jpg);
+  }
+  /* Fine Regole città */
+  
+  /* Regole filtro */
+  .container .box .city .filter {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .city:hover .filter{
+    display: none;
+  }
+  /* Fine Regole filtro */
+  
+  /* Regole nomi capitali */
+  .container .box .city h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-variant: small-caps;
+  }
+  /* Fine  Regole nomi capitali */
+  
