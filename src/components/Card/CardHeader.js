@@ -32,5 +32,6 @@ CardHeader.propTypes = {
   className: PropTypes.string,
   color: PropTypes.oneOf(["warning", "success", "danger", "info", "primary"]),
   plain: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
+  country: PropTypes.string,
 };
