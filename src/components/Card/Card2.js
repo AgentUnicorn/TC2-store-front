@@ -61,18 +61,24 @@ export default function RecipeReviewCard() {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Title"
+        title="Cooking along with Michelin trained chef"
         subheader="September 14, 2016"
         country="USA"
       />
       <CardMedia
         className={classes.media}
-        image="/static/images/cards/paella.jpg"
+        image="assets/img/000361790FF37CBE621697j.jpg"
         title="Paella dish"
       />
       <CardContent>
+      <Typography variant="body2" color="textSecondary" component="p">
+          Singapore
+        </Typography>
         <Typography variant="body2" color="textSecondary" component="p">
-          Description
+          Cooking along with Michelin trained chef
+        </Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          From $45/person - 1.25 hours
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
