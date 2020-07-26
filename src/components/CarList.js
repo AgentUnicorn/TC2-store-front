@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {Card, ListGroup, ListGroupItem} from 'react-bootstrap'
+import {Card} from 'react-bootstrap'
 import {Link, useHistory} from 'react-router-dom'
 import { Container, Row } from 'react-bootstrap';
 import { useQueryParam, NumberParam } from 'use-query-params';
@@ -11,13 +11,12 @@ const CarList = () => {
 
     const [car, setCar] = useState([])
     const [page, setPage] = useQueryParam('page', NumberParam)
-    // const url = 'http://localhost:5000/car'
     useEffect(()=> {
         async function fetchData(p){
             if(isNaN(p)){
                 p = 1
             }
-            const url = `http://localhost:5000/car?page=${p}`
+            const url = `${process.env.REACT_APP_API_URL}/car?page=${p}`
             const data = await fetch(url)
             const carData = await data.json()
             setCar(carData)

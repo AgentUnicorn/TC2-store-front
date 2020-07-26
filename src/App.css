@@ -89,6 +89,7 @@
   text-align: center;
   color: white;
   width: 100%;
+  height: auto;
 }
 .image {
   position: relative;
@@ -192,7 +193,7 @@
   animation: slide 10s linear infinite forwards;
 }
 
-.transparentText span {
+.transparentText .rainbow-text {
   background: repeating-linear-gradient(
     -45deg, 
     red 0%, 

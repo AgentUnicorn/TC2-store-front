@@ -16,7 +16,7 @@ export const Footer = () => {
                         </a>
                     </div>
                     <div className="text-center center-block transparentText fontWeight">
-                        Made with 💖 by <span>BINH NGUYEN</span> aka <strong>SHIRO</strong>
+                        Made with <span>💖</span> by <span className="rainbow-text">BINH NGUYEN</span> aka <strong>SHIRO</strong>
                     </div>
                 </div>
             </section>

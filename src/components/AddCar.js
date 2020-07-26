@@ -3,30 +3,36 @@
   
   const AddCar = (e) => {
     
-    const url = 'http://localhost:5000/car'
+    const url = `${process.env.REACT_APP_API_URL}/car`
 
     const [name, setName] = useState("")
-    // const [pictureUrl, setPictureUrl] = useState("")
     const [brand, setBrand] = useState("")
-    const [tags, setTags] = useState(0)
-    // const [duration, setDuration] = useState(0)
+    // const [tags, setTags] = useState("")
 
     const createCar = async (e) => {
         e.preventDefault();
         const carDetail = {
             name,
             brand,
-            tags
+            // tags
         }
 
-        const newCar = await fetch(url, {
+        const newCar = {
             method: "POST",
             headers: {
-                'Content-Type': 'application/json'
+                'Content-type': 'application/json'
             },
             body: JSON.stringify(carDetail)
-        });
-        alert("Car created")
+        }
+
+        fetch(url, newCar)
+        .then((response) => {
+            return response.json();
+        }).then((result) => {
+            alert('Car Created')
+            window.location = `${process.env.REACT_APP_TC2_FE}`
+        })
+        .catch(err => console.log(err))
     }
 
     return (
@@ -59,13 +65,13 @@
             />
             <br />
 
-            <Form.Control 
+            {/* <Form.Control 
                 type="number" 
                 placeholder="Tags" 
                 name="tag"
                 value={tags}
                 onChange = {e => setTags(e.target.value)}
-            />
+            /> */}
             <br />
 
             {/* <Form.Control 

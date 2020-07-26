@@ -8,7 +8,7 @@ import '../css/CarDetail.css'
 const CarDetail = (props) => {
     const [car, setCar] = useState([])
     const { id } = useParams()
-    const url = `http://localhost:5000/car/${id}`
+    const url = `${process.env.REACT_APP_API_URL}/car/${id}`
     useEffect(()=> {
         async function fetchData(){
             const data = await fetch(url)
@@ -23,12 +23,12 @@ const CarDetail = (props) => {
             method: 'DELETE'
         };
 
-        fetch(url, requestOptions).then((response) => {
+        fetch(url, requestOptions)
+        .then((response) => {
             return response.json();
         }).then((result) => {
-            result.json()
             alert('Delete Success')
-            window.location = 'http://localhost:3000'
+            window.location = `${process.env.REACT_APP_TC2_FE}`
         })
     }
 

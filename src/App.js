@@ -17,7 +17,7 @@ import {
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {QueryParamProvider} from 'use-query-params'
-import {CardGroup, Container, Row, Col, CardDeck} from 'react-bootstrap'
+require('dotenv').config()
 
 
 
