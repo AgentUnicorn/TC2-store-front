@@ -8,6 +8,7 @@ import Video from './components/Video'
 import Image from './components/Image'
 import Footer from './components/Footer'
 import CarDetail from './components/CarDetail'
+import Edit from './components/Edit'
 import {
   BrowserRouter as Router,
   Switch,
@@ -29,6 +30,9 @@ function App() {
       <div className="App">
       
         <Switch>
+          <Route path="/car/edit/:id">
+            <Edit />
+          </Route>
           <Route path="/car/:id">
             <CarDetail />
           </Route>

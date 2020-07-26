@@ -45,7 +45,6 @@
   width: 80%;
   flex-direction: row;
   justify-content: space-around;
-  border: 1px solid white;
   margin-left: 10%;
   margin-right: 10%;
   padding-bottom: 5%;
@@ -70,15 +69,15 @@
   margin: 5% 10%;
 }
 /* line behind title */
-h3 {
+.line-behind {
   display: grid;
   align-items: center;
   text-align: center;
   grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
   grid-gap: 20px;
 }
-h3:before,
-h3:after {
+.line-behind:before,
+.line-behind:after {
   content: '';
   border-top: 2px solid;
 }
@@ -223,3 +222,4 @@ h3:after {
 .fontWeight span {
   font-weight: 800
 }
+

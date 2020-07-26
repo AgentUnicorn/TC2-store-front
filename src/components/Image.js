@@ -11,7 +11,7 @@ export const Image = () => {
                 WELCOME TO THE CREW® 2 <br /> WEB STORE
               </div>
             </div>
-              <h3 className="title-main">
+              <h3 className="title-main line-behind">
                 <span>CHECK OUT THESE NEW CAR IN STORE</span>
               </h3>
         </div>

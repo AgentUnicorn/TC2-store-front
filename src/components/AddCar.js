@@ -19,7 +19,7 @@
             tags
         }
 
-        const newExp = await fetch(url, {
+        const newCar = await fetch(url, {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
