@@ -131,10 +131,13 @@
 
 /* FOOTER ICON  */
 #lab_social_icon_footer {
-  padding: 2% 0;
+  padding: 15px 0;
   background-color: #333333;
-  color: white
-
+  color: white;
+  /* position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%; */
 }
 
 #lab_social_icon_footer a {

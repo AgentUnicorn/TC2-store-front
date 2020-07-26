@@ -16,7 +16,7 @@ const CarList = () => {
             if(isNaN(p)){
                 p = 1
             }
-            const url = `${process.env.REACT_APP_API_URL}/car?page=${p}`
+            const url = `https://tc2-store.herokuapp.com/car/?page=${p}` || `${process.env.REACT_APP_API_URL}/car?page=${p}`
             const data = await fetch(url)
             const carData = await data.json()
             setCar(carData)

@@ -1,0 +1,29 @@
+.form-add {
+    border: 1px solid white;
+    /* display: flex; */
+    background-image: url('https://s2.best-wallpaper.net/wallpaper/5120x2880/1811/The-Crew-2-Mercedes-Benz-supercar_5120x2880.jpg');
+    min-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.form-edit {
+    border: 1px solid white;
+    /* display: flex; */
+    background-image: url('https://gamingtrend.com/wp-content/uploads/2018/07/tc2-1.jpg');
+    min-height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.formContainer {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+}

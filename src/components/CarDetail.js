@@ -8,7 +8,7 @@ import '../css/CarDetail.css'
 const CarDetail = (props) => {
     const [car, setCar] = useState([])
     const { id } = useParams()
-    const url = `${process.env.REACT_APP_API_URL}/car/${id}`
+    const url = `https://tc2-store.herokuapp.com/car/${id}` || `${process.env.REACT_APP_API_URL}/car/${id}`
     useEffect(()=> {
         async function fetchData(){
             const data = await fetch(url)

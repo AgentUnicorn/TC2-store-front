@@ -1,12 +1,15 @@
   import React, {useState} from 'react'
   import {Form, Button} from 'react-bootstrap'
+  import '../css/Form.css'
+
   
   const AddCar = (e) => {
     
-    const url = `${process.env.REACT_APP_API_URL}/car`
+    const url = "https://tc2-store.herokuapp.com/car" || `${process.env.REACT_APP_API_URL}/car`
 
     const [name, setName] = useState("")
     const [brand, setBrand] = useState("")
+    const [pictureUrl, setPictureUrl] = useState("")
     // const [tags, setTags] = useState("")
 
     const createCar = async (e) => {
@@ -14,6 +17,7 @@
         const carDetail = {
             name,
             brand,
+            pictureUrl,
             // tags
         }
 
@@ -36,8 +40,11 @@
     }
 
     return (
-        <Form onSubmit={createCar}>
-          <Form.Group>
+        <div className="form-add">
+                
+        <Form onSubmit={createCar} className="formContainer">
+            <h2>Create a car here </h2>
+            <Form.Group>
             <Form.Control 
                 type="text" 
                 placeholder="Name" 
@@ -46,16 +53,14 @@
                 onChange = {e => setName(e.target.value)}
             />
             <br />
-
-            {/* <Form.Control 
+            <Form.Control 
                 type="text" 
                 placeholder="Picture Url" 
                 name="pictureUrl"
                 value={pictureUrl}
                 onChange = {e => setPictureUrl(e.target.value)}
             />
-            <br /> */}
-
+            <br />
             <Form.Control 
                 type="text" 
                 placeholder="Brand" 
@@ -64,25 +69,7 @@
                 onChange = {e => setBrand(e.target.value)}
             />
             <br />
-
-            {/* <Form.Control 
-                type="number" 
-                placeholder="Tags" 
-                name="tag"
-                value={tags}
-                onChange = {e => setTags(e.target.value)}
-            /> */}
             <br />
-
-            {/* <Form.Control 
-                type="number" 
-                placeholder="Duration" 
-                name="duration"
-                value={duration}
-                onChange = {e => setDuration(e.target.value)}
-            /> */}
-            <br />
-
             <Button 
                 variant="primary" 
                 type="submit" 
@@ -92,6 +79,7 @@
             </Button>
           </Form.Group>
         </Form>
+        </div>
       )
   }
   
