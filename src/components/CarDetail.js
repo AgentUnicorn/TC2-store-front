@@ -28,7 +28,7 @@ const CarDetail = (props) => {
             return response.json();
         }).then((result) => {
             alert('Delete Success')
-            window.location = `${process.env.REACT_APP_TC2_FE}`
+            window.location = `https://thecrew2-webstore.netlify.app/` || `${process.env.REACT_APP_TC2_FE}`
         })
     }
 

@@ -6,7 +6,7 @@ import '../css/Form.css'
 const Edit = (e) => {
   
     const { id } = useParams()
-    const url = "https://tc2-store.herokuapp.com" || `${process.env.REACT_APP_API_URL}/car/edit/${id}`
+    const url = `https://tc2-store.herokuapp.com/car/edit/${id}` || `${process.env.REACT_APP_API_URL}/car/edit/${id}`
 
     const [car, setCar]=useState([])
     useEffect(()=> {
@@ -46,7 +46,7 @@ const Edit = (e) => {
         }).then((result) => {
             result.json()
             alert('Delete Success')
-            window.location = `${process.env.REACT_APP_TC2_FE}/car/edit/${id}`
+            window.location = `https://thecrew2-webstore.netlify.app/car/${id}` || `${process.env.REACT_APP_TC2_FE}/car/${id}`
         })
         .catch(err => console.log(err))
   }

@@ -34,7 +34,7 @@
             return response.json();
         }).then((result) => {
             alert('Car Created')
-            window.location = `${process.env.REACT_APP_TC2_FE}`
+            window.location = `https://thecrew2-webstore.netlify.app/` || `${process.env.REACT_APP_TC2_FE}`
         })
         .catch(err => console.log(err))
     }
