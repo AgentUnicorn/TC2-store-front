@@ -1,13 +1,94 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', 
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* .navLogo {
+  background: none;
+  cursor: pointer;
+  transition: 0.9s;
+  overflow: hidden;
+  border: 1px solid white;
+} */
+/* .navLogoAfter {
+  color: white 
+}
+.navLogoAfter:hover {
+  color: black  
+} */
+/* .navLogo::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background: yellow;
+  transition: 0.9s;
+  transform: skew(-20deg);
+}
+
+.navLogoAfter::before {
+  left: 0;
+}
+
+.navLogoAfter:hover::before {
+  width:  23%;
+} */
+
+
+.header {
+  transform: skew(-20deg);
+  color: white !important;
+  font-weight: 800;
+}
+
+
+.header > .navLink > p {
+  font-weight: 400;
+  display: inline-block;
+  transform: skew(20deg);
+  margin-bottom: 0;
+}
+
+.header > .navLink:hover {
+  color: black !important;
+  transition: 0.9s;
+  font-weight: 800;
+  position: relative;
+  background: yellow;
+}
+
+
+/* Change Logo on hover */
+#onhover {
+  display: none
+}
+#surround:hover span[id="initial"] {
+  display: none;
+}
+#surround:hover span[id="onhover"] {
+  display: block;
+  background-color: yellow;
+}
+
+
+/* .navLink:hover {
+  display: inline-block;
+  transform: skew(20deg);
+  background: yellow;
+  color: black !important;
+  transition: 0.9s;
+  font-weight: 700;
+  position: relative;
+} */
+

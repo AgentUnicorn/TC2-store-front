@@ -1,23 +1,22 @@
   import React, {useState} from 'react'
   import {Form, Button} from 'react-bootstrap'
   
-  const AddExp = (e) => {
+  const AddCar = (e) => {
     
-    const url = 'http://localhost:5000/exp'
+    const url = 'http://localhost:5000/car'
 
-    const [title, setTitle] = useState("")
-    const [pictureUrl, setPictureUrl] = useState("")
-    const [country, setcountry] = useState("")
-    const [price, setPrice] = useState(0)
-    const [duration, setDuration] = useState(0)
+    const [name, setName] = useState("")
+    // const [pictureUrl, setPictureUrl] = useState("")
+    const [brand, setBrand] = useState("")
+    const [tags, setTags] = useState(0)
+    // const [duration, setDuration] = useState(0)
 
-    const createExp = async (e) => {
+    const createCar = async (e) => {
         e.preventDefault();
-        const expData = {
-            title,
-            pictureUrl,
-            country,
-            price,duration
+        const carDetail = {
+            name,
+            brand,
+            tags
         }
 
         const newExp = await fetch(url, {
@@ -25,70 +24,70 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(expData)
+            body: JSON.stringify(carDetail)
         });
-        alert("Experience created")
+        alert("Car created")
     }
 
     return (
-        <Form onSubmit={createExp}>
+        <Form onSubmit={createCar}>
           <Form.Group>
             <Form.Control 
                 type="text" 
-                placeholder="Title" 
-                name="title"
-                value={title}
-                onChange = {e => setTitle(e.target.value)}
+                placeholder="Name" 
+                name="name"
+                value={name}
+                onChange = {e => setName(e.target.value)}
             />
             <br />
 
-            <Form.Control 
+            {/* <Form.Control 
                 type="text" 
                 placeholder="Picture Url" 
                 name="pictureUrl"
                 value={pictureUrl}
                 onChange = {e => setPictureUrl(e.target.value)}
             />
-            <br />
+            <br /> */}
 
             <Form.Control 
                 type="text" 
-                placeholder="Country" 
-                name="country"
-                value={country}
-                onChange = {e => setcountry(e.target.value)}
+                placeholder="Brand" 
+                name="brand"
+                value={brand}
+                onChange = {e => setBrand(e.target.value)}
             />
             <br />
 
             <Form.Control 
                 type="number" 
-                placeholder="Price" 
-                name="price"
-                value={price}
-                onChange = {e => setPrice(e.target.value)}
+                placeholder="Tags" 
+                name="tag"
+                value={tags}
+                onChange = {e => setTags(e.target.value)}
             />
             <br />
 
-            <Form.Control 
+            {/* <Form.Control 
                 type="number" 
                 placeholder="Duration" 
                 name="duration"
                 value={duration}
                 onChange = {e => setDuration(e.target.value)}
-            />
+            /> */}
             <br />
 
             <Button 
                 variant="primary" 
                 type="submit" 
-                value="Create exp"
+                value="Create car"
             >
-                Create Experience
+                Create Car
             </Button>
           </Form.Group>
         </Form>
       )
   }
   
-  export default AddExp
+  export default AddCar
   

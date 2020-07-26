@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  margin-top: 60px;
+  background-color: black;
 }
 
 .App-logo {
@@ -35,4 +37,189 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.main {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid white;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 5%;
+}
+
+.cardMain {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* MAIN TITLE */
+.title-main {
+  color: white;
+  font-weight: 800;
+  margin: 5% 10%;
+}
+/* line behind title */
+h3 {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
+  grid-gap: 20px;
+}
+h3:before,
+h3:after {
+  content: '';
+  border-top: 2px solid;
+}
+
+
+/* IMAGE CONTENT's classes */
+.containerImage {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+.image {
+  position: relative;
+  height: auto; 
+  width: 100%;
+  filter: brightness(50%);
+}
+.textOnImage {
+  position: absolute;
+  left: 32%;
+  bottom: 35%;
+  font-weight: 800;
+  font-size: xx-large;
+}
+
+/* VIDEO COMPONENT's classes */
+.containerVideo {
+  color:  #e1ce16;
+  width: 100%;
+  height: 100%;
+}
+.videoImage {
+  position: relative;
+  height: auto; 
+  width: 100%;
+  filter: brightness(50%);
+}
+.videoText {
+  position: absolute;
+  left: 42%;
+  top: 10%;
+}
+.videoContent {
+  position: absolute;
+  left: 15%;
+  top: 30%;
+}
+
+
+/* FOOTER ICON  */
+#lab_social_icon_footer {
+  padding: 2% 0;
+  background-color: #333333;
+  color: white
+
+}
+
+#lab_social_icon_footer a {
+  color: white;
+  margin-right: 1%;
+}
+
+#lab_social_icon_footer .social:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+#lab_social_icon_footer .social {
+  -webkit-transform: scale(0.8);
+  /* Browser Variations: */
+  
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+}
+/*
+    Multicoloured Hover Variations
+*/
+
+#lab_social_icon_footer #social-gh:hover {
+  color: green;
+}
+#lab_social_icon_footer #social-yt:hover {
+  color: red;
+}
+
+
+/* TRANSPARENT TEXT */
+.transparentText {
+  margin-top: 1%;
+}
+
+.transparentText h2 {
+  background: repeating-linear-gradient(
+    -45deg, 
+    red 0%, 
+    yellow 7.14%, 
+    rgb(0,255,0) 14.28%,
+    rgb(0,255,255) 21.4%, 
+    cyan 25.56%, 
+    blue 35.7%,
+    magenta 42.84%,
+    red 50% 
+  );
+  background-size: 600vw 600vw;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: slide 10s linear infinite forwards;
+}
+
+.transparentText span {
+  background: repeating-linear-gradient(
+    -45deg, 
+    red 0%, 
+    yellow 7.14%, 
+    rgb(0,255,0) 14.28%,
+    rgb(0,255,255) 21.4%, 
+    cyan 25.56%, 
+    blue 35.7%,
+    magenta 42.84%,
+    red 50% 
+  );
+  background-size: 600vw 600vw;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: slide 10s linear infinite forwards;
+}
+
+@keyframes slide {
+  0%{
+    background-position-x: 0%
+  }
+  100%{
+    background-position-x: 600vw;
+  }
+}
+
+.fontWeight span {
+  font-weight: 800
 }

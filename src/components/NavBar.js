@@ -1,23 +1,53 @@
 import React from 'react'
-import {Navbar, Nav, Form, FormControl, Button} from 'react-bootstrap'
+import '../index'
+import {Navbar, Nav, Button} from 'react-bootstrap'
+import LogoWhite from '../Images/Logo.png'
+import LogoBlack from '../Images/Logo-black.png'
+
 
 const NavBar = () => {
     return (
-        <div>
-            <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                <Nav className="mr-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/add">Create your experience</Nav.Link>
-                    <Nav.Link href="#pricing">Pricing</Nav.Link>
-                </Nav>
-                <Form inline>
-                    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                    <Button variant="outline-info">Search</Button>
-                </Form>
-            </Navbar>
-        </div>
-    )
+      <div>
+        <Navbar collapseOnSelect className="m-0" expand="lg" fixed="top" bg="dark" variant="dark">
+
+            {/* Logo Section  */}
+          <Navbar.Brand href="#home" id="surround" className="navLogo navLogoAfter">
+              <span id="initial">
+                <img
+                  src={LogoWhite}
+                  width="118"
+                  height="34"
+                  className="d-inline-block align-top"
+                  alt="TC2 logo"
+                />
+              </span>
+              <span id="onhover">
+                <img
+                  src={LogoBlack}
+                  width="118"
+                  height="34"
+                  className="d-inline-block align-top logo-top"
+                  alt="TC2 logo black"
+                />
+              </span>
+          </Navbar.Brand>
+
+          {/* Middle Section */}
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mr-auto ml-auto header">
+            <Nav.Link className="navLink mr-2" href="/"><p>HOME PAGE</p></Nav.Link>
+            <Nav.Link className="navLink mr-2" href="/video"><p>YOUTUBE VIDEO</p></Nav.Link>
+            <Nav.Link className="navLink mr-2" href="/add"><p>CREATE CAR</p></Nav.Link>
+          </Nav>
+
+          {/* Input Section */}
+          <Button className="mr-2" variant="success">Sign In</Button>
+          <Button variant="primary">Sign Up</Button>
+          </Navbar.Collapse>
+        </Navbar>
+      </div>
+    );
 }
 
 export default NavBar
