@@ -3,7 +3,7 @@ import {Form, Button} from 'react-bootstrap'
 import {useParams} from 'react-router-dom'
 import '../css/Form.css'
 
-const Edit = (e) => {
+const Edit = () => {
   
     const { id } = useParams()
     const url = `https://tc2-store.herokuapp.com/car/edit/${id}` || `${process.env.REACT_APP_API_URL}/car/edit/${id}`
@@ -44,8 +44,7 @@ const Edit = (e) => {
         .then((response) => {
             return response.json();
         }).then((result) => {
-            result.json()
-            alert('Delete Success')
+            alert('Edit Success')
             window.location = `https://thecrew2-webstore.netlify.app/car/${id}` || `${process.env.REACT_APP_TC2_FE}/car/${id}`
         })
         .catch(err => console.log(err))
